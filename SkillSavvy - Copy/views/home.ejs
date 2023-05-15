@@ -1,0 +1,20 @@
+<%- include("partials/header"); -%>
+
+<div id="explore">
+
+  <%  courses.forEach(function(course) { %>
+
+    <div class="course-container" onclick="location.href='/courses/<%= course._id %>'"">
+      <img class="course-img" src="/images/<%= course.thumbnail %>"></img>
+      <div class="details">
+        <p class="course-title"><a href="/courses/<%=course._id%>"><%= course.title %></a></p>
+      </div>
+    </div>
+    
+  <% }) %>
+
+</div>
+
+<script src="home.js" />
+
+<%- include("partials/footer"); -%>
