@@ -1,0 +1,22 @@
+
+<%- include("partials/header"); -%>
+
+<form id="create-form" action="/create" method="post" enctype="multipart/form-data">
+  <h1>Create</h1>
+  <h2 class="create-label">Title</h2>
+  <input class="create-input" type="text" name="title" placeholder="Title..." required>
+
+  <h2 class="create-label">Description</h2>
+  <textarea class="create-input" name="description" placeholder="Description..." required></textarea>
+
+  <h2 class="create-label">Thumbnail</h2>
+  <input class="create-upload" type="file" name="image" accept="image/*" required>
+
+  <h2 class="create-label">Video</h2>
+  <input class="create-upload" type="file" name="video" accept="video/*" required>
+
+  <input class="create-btn" type="submit" value="Create" name="submit">
+</form>
+
+
+<%- include("partials/footer"); -%>
